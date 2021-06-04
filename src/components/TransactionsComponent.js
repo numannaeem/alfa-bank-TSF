@@ -3,13 +3,17 @@ import { Breadcrumb, Container, Row, Table, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 
 function Transactions(props) {
+
+    if(!props.transactions.length)
+    return(<h5 className='text-center text-info my-5'>Loading...<br/>(if this takes too long, please refresh the page or try again later)</h5>)
+
     const transactionList = props.transactions.map((t) => {
         const date = new Date(t.date).toLocaleString('en-US')
         return(
-            <tr key={t._id}>
+            <tr style={{cursor: 'default'}} key={t._id}>
                 <td>{t.from}</td>
                 <td>{t.to}</td>
-                <td>₹ {t.amount}</td>
+                <td>₹{t.amount}</td>
                 <td>{date}</td>
                 <td>{t._id}</td>
             </tr>

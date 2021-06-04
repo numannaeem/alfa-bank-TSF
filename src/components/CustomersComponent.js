@@ -3,11 +3,15 @@ import { Container, Table,Row, Breadcrumb } from 'react-bootstrap'
 import { Link, useHistory } from 'react-router-dom';
 
 function Customers(props) {
+    
     const history = useHistory()
 
     const gotoUser = (id) => {
         history.push(`/customer/${id}`)
     }
+
+    if(!props.customers.length)
+        return(<h5 className='text-center text-info my-5'>Loading...<br/>(if this takes too long, please refresh the page or try again later)</h5>)
 
     const customerList = props.customers.map((c) => {
         return(
@@ -15,13 +19,13 @@ function Customers(props) {
                 <td>{c.name}</td>
                 <td>{c.email}</td>
                 <td>{c.mobile}</td>
-                <td>{c.balance}</td>
+                <td>₹{c.balance}</td>
             </tr>
         )
     })
     
     return(
-        <>
+        <div>
             <Container style={{minHeight: "100vh"}}>
                 <Row>
                     <Breadcrumb className='col-12'>
@@ -44,7 +48,7 @@ function Customers(props) {
                     </tbody>
                 </Table>
             </Container>
-        </>
+        </div>
     )
 }
 
