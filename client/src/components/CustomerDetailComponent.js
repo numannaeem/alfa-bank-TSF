@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Card, Col, Row, Breadcrumb, Button } from 'react-bootstrap'
+import { Container, Card, Col, Row, Breadcrumb } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 function CustomerDetail(props) {
