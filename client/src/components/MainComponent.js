@@ -14,7 +14,7 @@ class Main extends Component {
         super(props)
         this.state = {
             customers: [],
-            transactions: [],
+            transactions: undefined,
             selectedCustomer: { _id: 0},
             isModalOpen: false,
         }

@@ -13,8 +13,8 @@ function CustomerDetail(props) {
                         <Breadcrumb.Item active>{props.customer.name}</Breadcrumb.Item>
                     </Breadcrumb>
                 </Row>
-                <Row>
-                    <Card style={{margin:"4rem auto"}}>
+                <Row className='d-flex justify-content-center'>
+                    <Card className="customer-card" style={{margin:"4rem 0.8rem"}}>
                         <Card.Header>
                             <h3>{props.customer.name}</h3>
                             <Card.Subtitle className='text-muted my-1'>ID# {props.customer._id}</Card.Subtitle>
@@ -42,7 +42,7 @@ function CustomerDetail(props) {
                             </Row>
                         </Card.Body>
                         <Card.Footer>
-                            <Button onClick={() => props.onClick(props.customer._id)} variant={'outline-success'}>Transfer Money</Button>
+                            <button className='btn transfer-btn' onClick={() => props.onClick(props.customer._id)}>Transfer Money</button>
                         </Card.Footer>
                     </Card>
                 </Row>

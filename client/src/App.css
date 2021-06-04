@@ -3,6 +3,10 @@ ul {
   padding: 0;
 }
 
+a {
+  color: rgb(95, 7, 66);
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -94,3 +98,40 @@ footer p {
   background-color: rgb(156, 0, 156);
   color: white;
 }
+
+.card-header, .card-footer {
+  background-color: rgba(144, 252, 134, 0.185);
+}
+
+
+.customer-card {
+  border: 1px solid rgb(1, 138, 1);
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px 0px rgb(204, 204, 204);
+}
+
+.transfer-btn {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 0px 0px rgb(5, 88, 5);
+  border-radius: 1rem;
+  border: solid 1px darkgreen;
+  transition: box-shadow 100ms ease-out, transform 100ms ease-out;
+}
+
+.transfer-btn:focus {
+  outline: none;
+  transform: translateY(-3px);
+  box-shadow: 0 3px 0px 0px rgb(5, 88, 5);
+}
+
+.transfer-btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 0px 0px rgb(5, 88, 5);
+}
+
+.transfer-btn:active {
+  transform: none;
+  box-shadow: none;
+}
+

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Transactions(props) {
 
-    if(!props.transactions.length)
+    if(!props.transactions)
     return(<h5 className='text-center text-info my-5'>Loading...<br/>(if this takes too long, please refresh the page or try again later)</h5>)
 
     const transactionList = props.transactions.map((t) => {
