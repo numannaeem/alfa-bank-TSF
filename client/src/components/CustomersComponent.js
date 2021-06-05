@@ -10,7 +10,7 @@ function Customers(props) {
         history.push(`/customer/${id}`)
     }
 
-    if(!props.customers)
+    if(!props.customers.length)
         return(
             <div className='d-flex flex-column justify-content-center align-items-center' style={{height:'70vh'}} >
                 <span className='text-dark fa fa-3x fa-spin fa-circle-notch'></span>
