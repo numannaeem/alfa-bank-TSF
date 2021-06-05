@@ -105,15 +105,16 @@ footer p {
 
 
 .customer-card {
-  border: 1px solid rgb(1, 138, 1);
+  /* border: 1px solid rgb(1, 138, 1); */
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0 0 20px 0px rgb(204, 204, 204);
 }
 
 .transfer-btn {
-  transform: translateY(-3px);
-  box-shadow: 0 3px 0px 0px rgb(5, 88, 5);
+  background-color: rgb(159, 233, 159);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 0px 0px rgb(24, 122, 24);
   border-radius: 1rem;
   border: solid 1px darkgreen;
   transition: box-shadow 100ms ease-out, transform 100ms ease-out;
@@ -121,17 +122,16 @@ footer p {
 
 .transfer-btn:focus {
   outline: none;
-  transform: translateY(-3px);
-  box-shadow: 0 3px 0px 0px rgb(5, 88, 5);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 0px 0px rgb(24, 122, 24);
 }
 
 .transfer-btn:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 0px 0px rgb(5, 88, 5);
+  transform: translateY(-7px);
+  box-shadow: 0 7px 0px 0px rgb(24, 122, 24);
 }
 
 .transfer-btn:active {
   transform: none;
   box-shadow: none;
 }
-

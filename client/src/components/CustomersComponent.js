@@ -10,8 +10,13 @@ function Customers(props) {
         history.push(`/customer/${id}`)
     }
 
-    if(!props.customers.length)
-        return(<h5 className='text-center text-info my-5'>Loading...<br/>(if this takes too long, please refresh the page or try again later)</h5>)
+    if(!props.customers)
+        return(
+            <div className='d-flex flex-column justify-content-center align-items-center' style={{height:'70vh'}} >
+                <span className='text-dark fa fa-3x fa-spin fa-circle-notch'></span>
+                <h5 className='text-muted mt-5'>(if this takes too long, please refresh the page or try again later)</h5>
+            </div>
+        )
 
     const customerList = props.customers.map((c) => {
         return(
